@@ -1,7 +1,7 @@
 # coding=utf-8
 import weakref
 import logging
-from locale import bind_textdomain_codeset
+#from locale import bind_textdomain_codeset
 
 from blueman.Constants import *
 from blueman.gui.GenericList import GenericList
@@ -102,7 +102,7 @@ class PluginDialog(Gtk.Window):
         self.applet = applet
 
         self.Builder = Gtk.Builder(translation_domain="blueman")
-        bind_textdomain_codeset("blueman", "UTF-8")
+#        bind_textdomain_codeset("blueman", "UTF-8")
         self.Builder.add_from_file(UI_PATH + "/applet-plugins-widget.ui")
 
         self.description = self.Builder.get_object("description")

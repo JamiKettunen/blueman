@@ -1,6 +1,6 @@
 # coding=utf-8
 from random import randint
-from locale import bind_textdomain_codeset
+#from locale import bind_textdomain_codeset
 import logging
 import ipaddress
 
@@ -26,7 +26,7 @@ class Network(ServicePlugin):
 
         self.Builder = Gtk.Builder()
         self.Builder.set_translation_domain("blueman")
-        bind_textdomain_codeset("blueman", "UTF-8")
+#        bind_textdomain_codeset("blueman", "UTF-8")
         self.Builder.add_from_file(UI_PATH + "/services-network.ui")
         self.widget = self.Builder.get_object("network_frame")
 
